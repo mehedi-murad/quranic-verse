@@ -5,7 +5,7 @@ const SearchType = () => {
     const [surah, setSurah] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/surah')
+        fetch('https://al-quran-server.vercel.app/surah')
         .then(res => res.json())
         .then(data => {
             setSurah(data)

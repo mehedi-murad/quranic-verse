@@ -15,14 +15,14 @@ const Navbar = () => {
                     <summary>
                         Menu
                     </summary>
-                    <ul className="p-2 bg-slate-600 rounded-t-none space-y-2">
+                    <ul className="p-2 bg-slate-700 rounded-t-none space-y-2">
                         <li>
-                            <NavLink>
+                            <NavLink to="/documentation">
                                 Documentation
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink>
+                            <NavLink to="/feedback">
                                 Feedback
                             </NavLink>
                         </li>

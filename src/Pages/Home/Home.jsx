@@ -25,7 +25,7 @@ const Home = () => {
     useEffect(() => {
       console.log('Search Query:', searchQuery);
       setLoading(true)
-      fetch(`http://localhost:5000/verse?page=${currentPage}&size=${testPerPage}&search=${searchQuery}`)
+      fetch(`https://al-quran-server.vercel.app/verse?page=${currentPage}&size=${testPerPage}&search=${searchQuery}`)
         .then((res) => res.json())
         .then((data) => {
           console.log('Fetched Data:', data);
@@ -37,24 +37,24 @@ const Home = () => {
         });
     }, [currentPage, testPerPage, searchQuery]);
       
-    const handleTestPerPage = e =>{
-      const value = parseInt(e.target.value)
-      console.log(value)
-      setTestPerPage(value)
-      setCurrentPage(0)
-    }
+    // const handleTestPerPage = e =>{
+    //   const value = parseInt(e.target.value)
+    //   console.log(value)
+    //   setTestPerPage(value)
+    //   setCurrentPage(0)
+    // }
   
-    const handlePrevPage = () => {
-      if(currentPage > 0){
-        setCurrentPage(currentPage - 1)
-      }
-    }
+    // const handlePrevPage = () => {
+    //   if(currentPage > 0){
+    //     setCurrentPage(currentPage - 1)
+    //   }
+    // }
   
-    const handleNextPage = () => {
-      if(currentPage < pages.length - 1){
-        setCurrentPage(currentPage + 1)
-      }
-    }
+    // const handleNextPage = () => {
+    //   if(currentPage < pages.length - 1){
+    //     setCurrentPage(currentPage + 1)
+    //   }
+    // }
 
       const handleSearch = (e) => {
         const newSearchQuery = e.target.value;
